@@ -1,4 +1,4 @@
-﻿namespace WhaToDo
+﻿namespace Beforevents
 {
     using Newtonsoft.Json;
 
@@ -23,7 +23,7 @@
         public string? To;
     }
 
-    public class WhaToDoMain
+    public class EngineMain
     {
         public static void Main(string[] args)
         {
@@ -44,8 +44,8 @@
                 Console.WriteLine(Environment.NewLine + (result ? "Completed without errors" : "Completed WITH ERRORS"));
             }
             string json = JsonConvert.SerializeObject(events, Formatting.Indented);
-            File.WriteAllText("api_get_list.json", json);
-            Loader.UploadGitHub("api_get_list.json", json);
+            Loader l = new Loader();
+            l.UploadGitHub(json);
         }
     }
 }

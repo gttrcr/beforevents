@@ -1,3 +1,4 @@
-bin/*
-obj/*
-proper.txt
+proper.json
+engine/bin/*
+engine/obj/*
+engine/api_events.json
