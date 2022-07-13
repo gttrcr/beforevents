@@ -3,6 +3,7 @@ namespace Beforevents
     using CG.Web.MegaApiClient;
     using Octokit;
     using Newtonsoft.Json.Linq;
+    using System.Linq;
 
     public class Loader
     {
@@ -45,7 +46,17 @@ namespace Beforevents
             var gitHubClient = new GitHubClient(new ProductHeaderValue(_gitProductHeaderValue));
             gitHubClient.Credentials = new Credentials(_gitCredentials);
             var (owner, repoName, filePath, branch) = (_gitUser, _gitRepo, _file, _gitBranch);
-            gitHubClient.Repository.Content.CreateFile(owner, repoName, filePath, new CreateFileRequest($"Events update for {DateTime.Today}", content, branch)).Wait();
+            var existingFile = gitHubClient.Repository.Content.GetAllContentsByRef(owner, repoName, filePath, branch);
+            try
+            {
+                IReadOnlyList<RepositoryContent> files = existingFile.Result;
+                string sha = files.First().Sha;
+                gitHubClient.Repository.Content.UpdateFile(owner, repoName, filePath, new UpdateFileRequest($"Events update for {DateTime.Today}", content, sha, branch)).Wait();
+            }
+            catch (System.Exception)
+            {
+                gitHubClient.Repository.Content.CreateFile(owner, repoName, filePath, new CreateFileRequest($"Events update for {DateTime.Today}", content, branch)).Wait();
+            }
             File.Delete(_file);
         }
     }
