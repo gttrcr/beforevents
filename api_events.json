@@ -1,7 +1,8 @@
-[
-  "events":
-  {
-    "name":"n",
-    "surname":"s"
-  }
+{
+  "events": [
+    {
+      "name": "n",
+      "surname": "s"
+    }
   ]
+}
