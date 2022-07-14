@@ -1,8 +1,149 @@
 {
-  "events": [
+  "Events": [
     {
-      "name": "n",
-      "surname": "s"
+      "Title": "Festival Balconscenico",
+      "Description": "Otto giorni di musica su un palcoscenico unico: i balconi di...",
+      "Where": "Comune di Verona - Verona (VR)Piazza delle Erbe, 37121 VERONA (VR)",
+      "From": "2022-07-15T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Comune+di+Verona+-+Verona+(VR)Piazza+delle+Erbe,+37121+VERONA+(VR)"
+    },
+    {
+      "Title": "La Traviata di Giuseppe Verdi",
+      "Description": "Quarto titolo del Festival 2022 Ã¨ nato espressamente come...",
+      "Where": "Arena di Verona - Verona (VR)Piazza BrÃ  28, 37121 VERONA (VR)",
+      "From": "2022-07-15T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Arena+di+Verona+-+Verona+(VR)Piazza+BrÃ +28,+37121+VERONA+(VR)"
+    },
+    {
+      "Title": "Ermal Meta torna in concerto per l'estate",
+      "Description": "Dopo aver annullato il tour invernale nei club e palazzetti...",
+      "Where": "Castello Scaligero - Villafranca di Verona (VR)Viale Europa, 37062 VILLAFRANCA DI VERONA (VR)",
+      "From": "2022-07-15T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Castello+Scaligero+-+Villafranca+di+Verona+(VR)Viale+Europa,+37062+VILLAFRANCA+DI+VERONA+(VR)"
+    },
+    {
+      "Title": "Paolo Nutini torna in concerto",
+      "Description": "Il suo ritorno in Italia si Ã¨ fatto attendere e finalmente,...",
+      "Where": "Anfiteatro del Vittoriale - Gardone Riviera (BS)Via al Vittoriale 12, 25083 GARDONE RIVIERA (BS)",
+      "From": "2022-07-15T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Anfiteatro+del+Vittoriale+-+Gardone+Riviera+(BS)Via+al+Vittoriale+12,+25083+GARDONE+RIVIERA+(BS)"
+    },
+    {
+      "Title": "Marco Paolini e Patrizia Laquidara in 'Boomers'",
+      "Description": "I Boomers sono la generazione nata tra il 1946 e il 1964, i...",
+      "Where": "Teatro Romano - Verona (VR)Via Regaste Redentore 2, 37129 VERONA (VR)",
+      "From": "2022-07-15T00:00:00",
+      "To": "2022-07-16T00:00:00",
+      "Maps": "https://www.google.com/maps?q=Teatro+Romano+-+Verona+(VR)Via+Regaste+Redentore+2,+37129+VERONA+(VR)"
+    },
+    {
+      "Title": "Sagra del polastrel, un gustoso appuntamento",
+      "Description": "Il fornitissimo stand gastronomico, oltre a servire il...",
+      "Where": "Comune di Monzambano - Monzambano (MN)Via Olfino 22, 46040 MONZAMBANO (MN)",
+      "From": "2022-07-15T00:00:00",
+      "To": "2022-07-17T00:00:00",
+      "Maps": "https://www.google.com/maps?q=Comune+di+Monzambano+-+Monzambano+(MN)Via+Olfino+22,+46040+MONZAMBANO+(MN)"
+    },
+    {
+      "Title": "Colpi di colore Festival 2022, l'estate di Moniga del Garda",
+      "Description": "Dopo il successo delle prime cinque edizioni, torna per il...",
+      "Where": "Castello di Moniga del Garda - Moniga del Garda (BS)Via Castello 1 12, 25080 MONIGA DEL GARDA (BS)",
+      "From": "2022-07-15T00:00:00",
+      "To": "2022-08-12T00:00:00",
+      "Maps": "https://www.google.com/maps?q=Castello+di+Moniga+del+Garda+-+Moniga+del+Garda+(BS)Via+Castello+1+12,+25080+MONIGA+DEL+GARDA+(BS)"
+    },
+    {
+      "Title": "Carmen di Georges Bizet",
+      "Description": "Il sipario del Festival 2022 si alza il 17 giugno 2022 con...",
+      "Where": "Arena di Verona - Verona (VR)Piazza BrÃ  28, 37121 VERONA (VR)",
+      "From": "2022-07-14T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Arena+di+Verona+-+Verona+(VR)Piazza+BrÃ +28,+37121+VERONA+(VR)"
+    },
+    {
+      "Title": "PFM â Premiata Forneria Marconi torna in concerto",
+      "Description": "Dopo lâuscita in tutto il mondo dellâalbum di inediti âHo...",
+      "Where": "Castello Scaligero - Villafranca di Verona (VR)Viale Europa, 37062 VILLAFRANCA DI VERONA (VR)",
+      "From": "2022-07-14T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Castello+Scaligero+-+Villafranca+di+Verona+(VR)Viale+Europa,+37062+VILLAFRANCA+DI+VERONA+(VR)"
+    },
+    {
+      "Title": "Serate d'estate al Parco Natura Viva",
+      "Description": "Tutti i sabati dall'11 giugno 2022: performes, artisti,...",
+      "Where": "Parco Natura Viva - Bussolengo (VR)LocalitÃ  Figara, 37012 BUSSOLENGO (VR)",
+      "From": "2022-07-16T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Parco+Natura+Viva+-+Bussolengo+(VR)LocalitÃ +Figara,+37012+BUSSOLENGO+(VR)"
+    },
+    {
+      "Title": "Festa del Ciclamino a Breonio di Fumane",
+      "Description": "Arriva la nuova edizione della Festa del Ciclamino a Breonio...",
+      "Where": "Comune di Fumane - Fumane (VR)Viale Roma 2, 37022 FUMANE (VR)",
+      "From": "2022-08-13T00:00:00",
+      "To": "2022-08-15T00:00:00",
+      "Maps": "https://www.google.com/maps?q=Comune+di+Fumane+-+Fumane+(VR)Viale+Roma+2,+37022+FUMANE+(VR)"
+    },
+    {
+      "Title": "Michael Kiwanuka",
+      "Description": "Le date sono state posticipate come da seguente calendario:...",
+      "Where": "Anfiteatro del Vittoriale - Gardone Riviera (BS)Via Vittoriale 22, 25083 GARDONE RIVIERA (BS)",
+      "From": "2022-07-14T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Anfiteatro+del+Vittoriale+-+Gardone+Riviera+(BS)Via+Vittoriale+22,+25083+GARDONE+RIVIERA+(BS)"
+    },
+    {
+      "Title": "Tour delle mura Tramonti UNESCO",
+      "Description": "Si tratta di una passeggiata tenuta da guide turistiche...",
+      "Where": "Comune di Verona - Verona (VR)Via Castello 8, 37141 VERONA (VR)",
+      "From": "2022-07-16T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Comune+di+Verona+-+Verona+(VR)Via+Castello+8,+37141+VERONA+(VR)"
+    },
+    {
+      "Title": "Aida di Giuseppe Verdi",
+      "Description": "l secondo titolo del Festival Ã¨, come da tradizione, Aida di...",
+      "Where": "Arena di Verona - Verona (VR)Piazza BrÃ  28, 37121 VERONA (VR)",
+      "From": "2022-07-16T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Arena+di+Verona+-+Verona+(VR)Piazza+BrÃ +28,+37121+VERONA+(VR)"
+    },
+    {
+      "Title": "Liverpool College",
+      "Description": "Un gruppo di giovani cantanti e musicisti per un concerto a...",
+      "Where": "Teatro Dim - Castelnuovo del Garda (VR)Via San Martino 3, 37014 CASTELNUOVO DEL GARDA (VR)",
+      "From": "2022-07-16T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Teatro+Dim+-+Castelnuovo+del+Garda+(VR)Via+San+Martino+3,+37014+CASTELNUOVO+DEL+GARDA+(VR)"
+    },
+    {
+      "Title": "Edoardo Bennato torna in concerto",
+      "Description": "Sono passati piÃ¹ di 40 anni dall'album \"Sono solo...",
+      "Where": "Castello Scaligero - Villafranca di Verona (VR)Viale Europa, 37062 VILLAFRANCA DI VERONA (VR)",
+      "From": "2022-07-16T00:00:00",
+      "To": null,
+      "Maps": "https://www.google.com/maps?q=Castello+Scaligero+-+Villafranca+di+Verona+(VR)Viale+Europa,+37062+VILLAFRANCA+DI+VERONA+(VR)"
+    },
+    {
+      "Title": "Tour del centro storico",
+      "Description": "Tornano, a partire dal mese di aprile, le Visite guidate...",
+      "Where": "Comune di Verona - Verona (VR)Via Castello 8, 37141 VERONA (VR)",
+      "From": "2022-07-16T00:00:00",
+      "To": "2022-07-17T00:00:00",
+      "Maps": "https://www.google.com/maps?q=Comune+di+Verona+-+Verona+(VR)Via+Castello+8,+37141+VERONA+(VR)"
+    },
+    {
+      "Title": "Festa di Fiamene 2022",
+      "Description": "Torna nei prati di Fiamene la grande festa all'aria aperta,...",
+      "Where": "Comune di Negrar - Negrar di Valpolicella (VR)Via Fiamene, 37024 NEGRAR DI VALPOLICELLA (VR)",
+      "From": "2022-07-29T00:00:00",
+      "To": "2022-08-06T00:00:00",
+      "Maps": "https://www.google.com/maps?q=Comune+di+Negrar+-+Negrar+di+Valpolicella+(VR)Via+Fiamene,+37024+NEGRAR+DI+VALPOLICELLA+(VR)"
     }
-  ]
+  ],
+  "LastUpdate": "15/07/2022 01:42:11"
 }
