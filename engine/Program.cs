@@ -7,8 +7,8 @@
         public string? Title;
         public string? Description;
         public string? Where;
-        public DateTime? From;
-        public DateTime? To;
+        public string? From;
+        public string? To;
         public Uri? Maps;
     }
 
@@ -21,6 +21,12 @@
         public string? Where;
         public string? From;
         public string? To;
+    }
+
+    public struct JObj
+    {
+        public List<Event> Events;
+        public string LastUpdate;
     }
 
     public class EngineMain
@@ -43,7 +49,11 @@
                 }
                 Console.WriteLine(Environment.NewLine + (result ? "Completed without errors" : "Completed WITH ERRORS"));
             }
-            string json = JsonConvert.SerializeObject(events, Formatting.Indented);
+
+            JObj obj = new JObj();
+            obj.Events = events;
+            obj.LastUpdate = DateTime.Now.ToString();
+            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
             Loader l = new Loader();
             l.UploadGitHub(json);
         }

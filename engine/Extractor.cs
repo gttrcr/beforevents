@@ -23,13 +23,18 @@ namespace Beforevents
             if (finder.Url.Contains("####"))
             {
                 it = true;
-                int startIndex = finder.Url.IndexOf("####");
-                int stopIndex = finder.Url.LastIndexOf("####");
-                target = finder.Url.Substring(startIndex, stopIndex - startIndex + 4);
-                string[] targets = finder.Url.Substring(startIndex + 4, stopIndex - startIndex - 4).Split(',');
-                from = int.Parse(targets[0]);
-                if (targets[1] != "")
-                    to = int.Parse(targets[1]);
+                int[] startIndexes = finder.Url.AllIndexesOf("####").ToArray();
+                string sFrom = finder.Url.Substring(startIndexes[0] + 4, startIndexes[1] - startIndexes[0] - 4);
+                string sTo = finder.Url.Substring(startIndexes[2] + 4, startIndexes[3] - startIndexes[2] - 4);
+                target = finder.Url.Substring(startIndexes[0], startIndexes[3] + 4 - startIndexes[0]);
+                if (sFrom != "")
+                    from = int.Parse(sFrom);
+                else
+                    from = 0;
+                if (sTo != "")
+                    to = int.Parse(sTo);
+                else
+                    to = int.MaxValue;
             }
 
             if (it)
@@ -62,9 +67,11 @@ namespace Beforevents
                             e.Maps = new Uri("https://www.google.com/maps?q=" + e.Where?.Replace(" ", "+"));
                         }
                         if (finder.From != null)
-                            e.From = node.SelectSingleNode(finder.From)?.InnerText.Normal().ToDateTime();
+                            e.From = node.SelectSingleNode(finder.From)?.InnerText.Normal().ToDateTime().ToString("dd/MM/yyyy");
                         if (finder.To != null)
-                            e.To = node.SelectSingleNode(finder.To)?.InnerText.Normal().ToDateTime();
+                            e.To = node.SelectSingleNode(finder.To)?.InnerText.Normal().ToDateTime().ToString("dd/MM/yyyy");
+                        if (e.To == "" || e.To == null)
+                            e.To = e.From;
 
                         events.Add(e);
                     }

@@ -9,7 +9,7 @@
     //    "To": null
     //}
     {
-        "Url": "https://www.virgilio.it/italia/san-pietro-in-cariano/eventi/((((?&page=####1,####))))",
+        "Url": "https://www.virgilio.it/italia/san-pietro-in-cariano/eventi/((((?&page=####1####,########))))",
         "Events": "//article[@class='eventi eventBox']",
         "Title": ".//h2[@itemprop='name']",
         "Description": ".//p[@itemprop='description']",
