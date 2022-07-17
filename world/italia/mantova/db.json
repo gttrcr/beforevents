@@ -1,0 +1,29 @@
+[
+    {
+        "Url": "https://www.mantovanotizie.com/news/eventi/page/####1,####",
+        "Events": "//div[@class='post excerpt']",
+        "Title": ".//h3[@class='titolonero']",
+        "Description": ".//p",
+        "Where": null,
+        "From": ".//div[@class='post-info']",
+        "To": null
+    },
+    {
+        "Url": "https://mantova-live.it/eventi/",
+        "Events": "//div[@class='e59-[0-50] x-col']", //improve with regex
+        "Title": ".//div[@class='e59-13 x-text x-text-headline']",
+        "Description": null,
+        "Where": null,
+        "From": ".//div[@class='e59-11 x-text x-text-headline']",
+        "To": null
+    },
+    {
+        "Url": "https://vocedimantova.it/eventi/",
+        "Events": "//div[@class='td-block-span4']",
+        "Title": ".//h3[@class='entry-title td-module-title']",
+        "Description": null,
+        "Where": null,
+        "From": null,
+        "To": null,
+    }
+]
