@@ -1,83 +1,58 @@
 ﻿namespace Beforevents
 {
     using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
     using System.Linq;
-
-    public struct Nation
-    {
-        public string Name;
-        public List<District> Districts;
-    }
-
-    public struct District
-    {
-        public string Name;
-        public List<Event> Events;
-    }
-
-    public struct Event
-    {
-        public string? Title;
-        public string? Description;
-        public string? Where;
-        public string? From;
-        public string? To;
-        public Uri? Maps;
-    }
-
-    public struct Finder
-    {
-        public string Url;
-        public string? Events;
-        public string? Title;
-        public string? Description;
-        public string? Where;
-        public string? From;
-        public string? To;
-    }
-
-    public struct JObj
-    {
-        public List<Event> Events;
-        public string LastUpdate;
-    }
 
     public class EngineMain
     {
+        public static World<Event> CycleAll(World<Finder> world)
+        {
+            World<Event> ret = new World<Event>();
+
+            //List<Event> events = new List<Event>();
+            //List<Finder>? finders = JsonConvert.DeserializeObject<List<Finder>>(File.ReadAllText("db.json"));
+            //for (int i = 0; i < finders?.Count; i++)
+            //{
+            //    bool result = true;
+            //    try
+            //    {
+            //        Extractor.Extract(finders[i], ref events);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine(ex.Message);
+            //        result = false;
+            //    }
+            //    Console.WriteLine(Environment.NewLine + (result ? "Completed without errors" : "Completed WITH ERRORS"));
+            //}
+
+            return ret;
+        }
+
         public static void Main(string[] args)
         {
-            List<Nation> world = new List<Nation>();
-            Directory.GetDirectories("world").ToList().ForEach(x => world.Add(new Nation() { Name = x, Districts = new List<District>() }));
-            for (int i = 0; i < world.Count; i++)
+            World<Finder> world = new World<Finder>();
+            world.Nations = new List<Nation<Finder>>();
+            world.Finders = new List<Finder>();
+            Directory.GetDirectories("world").ToList().ForEach(x =>
             {
-                dynamic d = JObject.Parse(File.ReadAllText(world[i].Name + "\\districts.json"));
-                world[i].Districts = new List<District>(); //d.Districts.Select(y => new District() { Name = y.Name, Events = new List<Event>() });
-            }
+                List<District<Finder>> districts = new List<District<Finder>>();
+                Directory.GetDirectories(x).ToList().ForEach(y => districts.Add(new District<Finder>() { Name = y, Finders = JsonConvert.DeserializeObject<List<Finder>>(File.ReadAllText(y + "\\db.json")) }));
+                List<Finder> finders = new List<Finder>();
+                if (File.Exists(x + "\\db.json"))
+                    finders = JsonConvert.DeserializeObject<List<Finder>>(File.ReadAllText(x + "\\db.json"));
+                world.Nations.Add(new Nation<Finder>() { Name = x, Districts = districts, Finders = finders });
+            });
+            if (File.Exists("world\\db.json"))
+                world.Finders.AddRange(JsonConvert.DeserializeObject<List<Finder>>(File.ReadAllText("world\\db.json")));
 
-            List<Event> events = new List<Event>();
-            List<Finder>? finders = JsonConvert.DeserializeObject<List<Finder>>(File.ReadAllText("db.json"));
-            for (int i = 0; i < finders?.Count; i++)
-            {
-                bool result = true;
-                try
-                {
-                    Extractor.Extract(finders[i], ref events);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    result = false;
-                }
-                Console.WriteLine(Environment.NewLine + (result ? "Completed without errors" : "Completed WITH ERRORS"));
-            }
+            World<Event> events = CycleAll(world);
 
-            JObj obj = new JObj();
-            obj.Events = events;
-            obj.LastUpdate = DateTime.Now.ToString();
-            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            //JObj obj = new JObj();
+            //obj.Events = events;
+            //obj.LastUpdate = DateTime.Now.ToString();
             Loader l = new Loader();
-            l.UploadGitHub(json);
+            l.UploadGitHub(JsonConvert.SerializeObject(events, Formatting.Indented));
         }
     }
 }

@@ -1,0 +1,11 @@
+[
+    {
+        "Url": "https://www.eventbrite.it/d/italy--milano/events/",
+        "Events": "article class='eds-event-card-content eds-event-card-content--grid eds-event-card-content--standard eds-event-card-content--fixed'",
+        "Title": "div class eds-event-card__formatted-name--is-clamped eds-event-card__formatted-name--is-clamped-three eds-text-weight--heavy",
+        "Description": null,
+        "Where": "div class eds-event-card-content__sub eds-text-bm eds-text-color--ui-600 eds-l-mar-top-1",
+        "From": "div class eds-event-card-content__sub-title eds-text-color--primary-brand eds-l-pad-bot-1 eds-l-pad-top-2 eds-text-weight--heavy eds-text-bm",
+        "To": null
+    }
+]
